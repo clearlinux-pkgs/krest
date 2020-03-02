@@ -4,7 +4,7 @@
 #
 Name     : krest
 Version  : 1.3.1
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/fb/d2/9dbbd3a76f2385041720a0eb51ddab676e688fa8bee8a1489470839616cf/krest-1.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/fb/d2/9dbbd3a76f2385041720a0eb51ddab676e688fa8bee8a1489470839616cf/krest-1.3.1.tar.gz
 Summary  : The Kaminario REST (krest) is a client library that provides ORM like interface for working with Kaminario K2 REST API
@@ -18,7 +18,11 @@ BuildRequires : requests
 BuildRequires : util-linux
 
 %description
+Krest is written in Python and is aimed to provide rapid enablement of managing and monitoring Kaminario K2 all-flash arrays using Python.
+
 Please see the project homepage_ for full description.
+
+.. _homepage: https://github.com/Kaminario/krest
 
 %package python
 Summary: python components for the krest package.
@@ -33,6 +37,7 @@ python components for the krest package.
 Summary: python3 components for the krest package.
 Group: Default
 Requires: python3-core
+Provides: pypi(krest)
 
 %description python3
 python3 components for the krest package.
@@ -40,13 +45,14 @@ python3 components for the krest package.
 
 %prep
 %setup -q -n krest-1.3.1
+cd %{_builddir}/krest-1.3.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572448676
+export SOURCE_DATE_EPOCH=1583165517
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
