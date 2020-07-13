@@ -4,7 +4,7 @@
 #
 Name     : krest
 Version  : 1.3.1
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/fb/d2/9dbbd3a76f2385041720a0eb51ddab676e688fa8bee8a1489470839616cf/krest-1.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/fb/d2/9dbbd3a76f2385041720a0eb51ddab676e688fa8bee8a1489470839616cf/krest-1.3.1.tar.gz
 Summary  : The Kaminario REST (krest) is a client library that provides ORM like interface for working with Kaminario K2 REST API
